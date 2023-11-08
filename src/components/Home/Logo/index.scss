@@ -1,13 +1,14 @@
 .logo-container {
     z-index: -1;
-    width: 700px;
+    width: 730px;
     height: 900px;
     position: absolute;
-    top: 200px;
+    top: 228px;
     right: 25%;
     bottom: 0;
     left: auto;
     margin: auto;
+    animation: bounceIn 3.5s 1s;
   
     img {
       width: 100%;

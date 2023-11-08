@@ -54,7 +54,7 @@ const Home = () => {
             strArray={nameArray}
             idx={15}
           />
-          <img src={SLogo} alt="developer" className='T-Logo'/>
+          <img src={SLogo} alt="developer" className='S-Logo'/>
             <AnimatedLetters
             letterClass={letterClass}
             strArray={lastNameArray}
