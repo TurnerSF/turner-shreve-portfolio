@@ -2,7 +2,7 @@
   background: #181818;
   width: 95px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 3;
   min-height: 500px;
@@ -122,4 +122,38 @@
         }
     }
   }
+  
+  @media (max-width: 1024px) {
+    width: 60px;
+    height: 100vh;
+
+    .logo img {
+      width: 40px;
+      position: relative;
+      left: 0px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 100vh;
+
+    .logo img {
+      width: 40px;
+      position: relative;
+      left: 0px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 60px;
+    height: 100vh;
+
+    .logo img {
+      width: 40px;
+      position: relative;
+      left: 0px;
+    }
+  }
+
 }

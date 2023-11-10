@@ -1,4 +1,5 @@
-import TSLogo from '../../../assets/images/TS.png'
+
+import backgroundTS from '../../../assets/images/background-TS.png'
 import './index.scss'
 
 const Logo = () => {
@@ -7,7 +8,7 @@ const Logo = () => {
     <div className="logo-container">
       <img
         className="solid-logo"
-        src={TSLogo}
+        src={backgroundTS}
         alt="JavaScript,  Developer"
       />
     </div>

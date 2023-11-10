@@ -93,5 +93,35 @@
     }
   }
 
-}
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 45px;
+      line-height: 1.2;
 
+      .T-Logo {
+        position: relative;
+        left: 0px; 
+      }
+      .S-Logo {
+        position: relative;
+        left: 0px; 
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px; 
+      line-height: 1.1; 
+
+      .T-Logo {
+        position: relative;
+        left: 0;
+      }
+      .S-Logo {
+        position: relative;
+        left: 0
+      }
+    }
+  }
+}

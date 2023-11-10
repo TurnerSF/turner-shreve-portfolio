@@ -18,3 +18,17 @@
       transform: rotateZ(30deg) !important;
     }
 }
+
+@media (max-width: 1024px) {
+  img {
+    position: absolute;
+    right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  img {
+    position: absolute;
+    left: 120px;
+  }
+}
