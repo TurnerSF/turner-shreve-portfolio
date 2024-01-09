@@ -3,8 +3,17 @@ import './index.scss'
 import LogoS from '../../assets/images/turner-shreve-portfolio.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faDiscord, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+  faEnvelope,
+  faFolder,
+  faHome,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  faDiscord,
+  faGithub,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => (
   <div className="nav-bar">
@@ -30,6 +39,14 @@ const Sidebar = () => (
         to="/contact"
       >
         <FontAwesomeIcon icon={faEnvelope} color="4d4d4e" />
+      </NavLink>{' '}
+      <NavLink
+        exact="true"
+        activeclass="active"
+        className="project-link"
+        to="/projects"
+      >
+        <FontAwesomeIcon icon={faFolder} color="4d4d4e" />
       </NavLink>
     </nav>
     <ul>
@@ -43,20 +60,12 @@ const Sidebar = () => (
         </a>
       </li>
       <li>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/TurnerSF"
-        >
+        <a target="_blank" rel="noreferrer" href="https://github.com/TurnerSF">
           <FontAwesomeIcon icon={faGithub} color="$4d4d4e" />
         </a>
       </li>
       <li>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://discord.gg/9bCcMUD5"
-        >
+        <a target="_blank" rel="noreferrer" href="https://discord.gg/9bCcMUD5">
           <FontAwesomeIcon icon={faDiscord} color="$4d4d4e" />
         </a>
       </li>
