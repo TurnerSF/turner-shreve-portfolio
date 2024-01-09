@@ -1,4 +1,4 @@
-import './index.scss'
+import './index.scss';
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 
@@ -16,7 +16,7 @@ const Projects = () => {
         'This is a simple Blackjack application that utilizes the "Deck of Cards" API to manage the deck of cards used in the game.',
     },
     {
-      title: 'WeLoveMovies',
+      title: 'We Love Movies',
       description:
         'The aim of this web application is to provide the user with a movie review and information site, similar to IMDB.',
     },
@@ -28,8 +28,9 @@ const Projects = () => {
     {
       title: 'Flashcard-O-Matic',
       description:
-        'A sleek kick and punch fighting game, crafted with HTML and inline styling, showcases a minimalist design. JavaScript powers the Fighter classes, enabling smooth actions and dynamic health updates.',
-    },
+        'Explore the dashboard to view all available decks. Create new decks to organize your flashcards. Add cards to decks effortlessly. Efficiently delete both decks and cards. Seamlessly edit decks and cards. Dive into your chosen deck and study by flipping between the question and answer sides. Technologies Utilized: HTML, CSS, Bootstrap, JavaScript, React, Node, Express, Knex, and PostgreSQL.',
+    }
+    
   ])
 
   useEffect(() => {

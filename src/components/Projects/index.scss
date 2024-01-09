@@ -51,35 +51,80 @@
       display: flex;
       flex-wrap: nowrap;
       gap: 2%;
-      margin: 0 -1%; /* Negative margin to counteract the gap and make the cards stretch to the edges */
+      margin: 0 -1%;
       width: 100%;
+      overflow-x: scroll;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer/Edge */
 
-      .col-3 {
-        width: calc(23% - 2%); /* Adjusted width to account for the gap */
-        margin: 0 1%; /* Adjusted margin to account for the gap */
-        margin-bottom: 20px;
+      &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
       }
 
-      .card {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border: 5px solid #ffd700;
-        padding: 20px;
-        color: #ffd700;
-        background: none;
-        box-sizing: border-box;
+      .col-3 {
+        width: calc(23% - 2%);
+        margin: 0 1%;
+        margin-bottom: 20px;
 
-        .card-font-title {
-          font-size: 24px;
-          margin-bottom: 10px;
+        .card {
+          width: 100%;
+          height: 600px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border: 2px solid #ffd700;
+          padding: 20px;
+          color: #ffd700;
+          background: none;
+          box-sizing: border-box;
+
+          .card-font-title {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            text-align: center;
+            border-bottom: 1px solid #ffd700;
+          }
+
+          .card-font-description {
+            font-size: 16px;
+            flex-grow: 1;
+            text-align: center;
+            letter-spacing: 1.3px;
+            margin-top: 0px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: #ffd700;
+            color: #115173;
+          }
         }
 
-        .card-font-description {
-          font-size: 18px;
-          flex-grow: 1;
+        &:nth-child(1) .card {
+          animation: fadeIn 5s forwards;
+          animation-delay: 0s;
+        }
+
+        &:nth-child(2) .card {
+          animation: fadeIn 5s forwards;
+          animation-delay: 1s;
+        }
+
+        &:nth-child(3) .card {
+          animation: fadeIn 5s forwards;
+          animation-delay: 2s;
+        }
+
+        &:nth-child(4) .card {
+          animation: fadeIn 5s forwards;
+          animation-delay: 3s;
+        }
+
+        &:nth-child(5) .card {
+          animation: fadeIn 5s forwards;
+          animation-delay: 4s;
         }
       }
     }
