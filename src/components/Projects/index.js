@@ -1,10 +1,15 @@
-import './index.scss';
+import './index.scss'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faArrowCircleLeft,
+  faArrowCircleRight,
+} from '@fortawesome/free-solid-svg-icons'
 
 const Projects = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const [details, setDetails] = useState([
+  const details = [
     {
       title: 'Restaurant Reservations',
       description:
@@ -29,9 +34,8 @@ const Projects = () => {
       title: 'Flashcard-O-Matic',
       description:
         'Explore the dashboard to view all available decks. Create new decks to organize your flashcards. Add cards to decks effortlessly. Efficiently delete both decks and cards. Seamlessly edit decks and cards. Dive into your chosen deck and study by flipping between the question and answer sides. Technologies Utilized: HTML, CSS, Bootstrap, JavaScript, React, Node, Express, Knex, and PostgreSQL.',
-    }
-    
-  ])
+    },
+  ]
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -55,17 +59,56 @@ const Projects = () => {
               idx={13}
             />
           </h1>
-          <div className="row p-4 mt-4">
-            {details.map((detail, index) => (
-              <div className="col-3 mb-5" key={index}>
-                <div className="card border-0">
-                  <h5 className="card-title card-font-title">{detail.title}</h5>
-                  <h6 className="card-font-description">
-                    {detail.description}
-                  </h6>
-                </div>
+          <div className="row p-3">
+            <div className="col-3">
+              <div className="card">
+                <h5 className="card-title card-font-title">
+                  {details[0].title}
+                </h5>
+                <h6 className="card-font-description">
+                  <details>{details[0].description} </details>
+                </h6>
               </div>
-            ))}
+              <div className="card">
+                <h5 className="card-title card-font-title">
+                  {details[1].title}
+                </h5>
+                <h6 className="card-font-description">
+                  <details>{details[1].description} </details>
+                </h6>
+              </div>
+              <div className="card">
+                <h5 className="card-title card-font-title">
+                  {details[2].title}
+                </h5>
+                <h6 className="card-font-description">
+                  <details>{details[2].description} </details>
+                </h6>
+              </div>
+              <div className="card">
+                <h5 className="card-title card-font-title">
+                  {details[3].title}
+                </h5>
+                <h6 className="card-font-description">
+                  <details>{details[3].description} </details>
+                </h6>
+              </div>
+              <div className="card">
+                <h5 className="card-title card-font-title">
+                  {details[4].title}
+                </h5>
+                <h6 className="card-font-description">
+                  <details>{details[4].description} </details>
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div className='arrows'>
+            <FontAwesomeIcon icon={faArrowCircleLeft} className="back-arrow" />
+            <FontAwesomeIcon
+              icon={faArrowCircleRight}
+              className="forward-arrow"
+            />
           </div>
         </div>
       </div>
