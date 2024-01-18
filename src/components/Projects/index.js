@@ -55,15 +55,28 @@ const Projects = () => {
   }, [])
 
   const scrollLeft = () => {
-    const left = document.querySelector('.presentation')
-    left.scrollBy(100, 0)
-  }
+    const left = document.querySelector('.presentation');
+    left.scrollBy(100, 0);
+  };
 
   const scrollRight = () => {
-    const right = document.querySelector('.presentation')
-    right.scrollBy(-100, 0)
-  }
+    const right = document.querySelector('.presentation');
+    right.scrollBy(-100, 0);
+  };
 
+  let scrollInterval;
+
+  const handleMouseDownLeft = () => {
+    scrollInterval = setInterval(scrollLeft, 100);
+  };
+
+  const handleMouseUp = () => {
+    clearInterval(scrollInterval);
+  };
+
+  const handleMouseDownRight = () => {
+    scrollInterval = setInterval(scrollRight, 100);
+  };
   
 
   return (
@@ -138,15 +151,17 @@ const Projects = () => {
             </div>
           </div>
           <div className="arrows">
-            <FontAwesomeIcon
+          <FontAwesomeIcon
               icon={faArrowCircleLeft}
               className="back-arrow"
-              onMouseDown={scrollRight}
+              onMouseDown={handleMouseDownRight}
+              onMouseUp={handleMouseUp}
             />
             <FontAwesomeIcon
               icon={faArrowCircleRight}
               className="forward-arrow"
-              onMouseDown={scrollLeft}
+              onMouseDown={handleMouseDownLeft}
+              onMouseUp={handleMouseUp}
             />
           </div>
         </div>
