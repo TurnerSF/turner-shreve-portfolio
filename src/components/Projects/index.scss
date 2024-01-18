@@ -105,6 +105,15 @@
   }
 }
 
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-shadow: #ffd700;
+}
 
 .arrows {
   display: flex;
@@ -114,7 +123,16 @@
   cursor: pointer;
 }
 
+.forward-arrow {
+  position: absolute;
+  bottom: 350px;
+  right: -70px;
+
+}
+
 .back-arrow {
-  margin-right: 1450px;
+  position: absolute;
+  bottom: 350px;
+  left: -70px;
   cursor: pointer;
 }
