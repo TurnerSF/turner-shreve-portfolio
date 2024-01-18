@@ -35,6 +35,12 @@ const Projects = () => {
       description:
         'Explore the dashboard to view all available decks. Create new decks to organize your flashcards. Add cards to decks effortlessly. Efficiently delete both decks and cards. Seamlessly edit decks and cards. Dive into your chosen deck and study by flipping between the question and answer sides. Technologies Utilized: HTML, CSS, Bootstrap, JavaScript, React, Node, Express, Knex, and PostgreSQL.',
     },
+    {
+      title: 'Animation Station',
+      description:
+        'Animation API for reviews and information on Animes to cartoons. Allows Users to upload their own information about shows they have watched to be able to build a website that holds all information on anyones favorite shows',
+    },
+    
   ]
 
   useEffect(() => {
@@ -48,6 +54,18 @@ const Projects = () => {
     }
   }, [])
 
+  const scrollLeft = () => {
+    const left = document.querySelector('.presentation')
+    left.scrollBy(100, 0)
+  }
+
+  const scrollRight = () => {
+    const right = document.querySelector('.presentation')
+    right.scrollBy(-100, 0)
+  }
+
+  
+
   return (
     <>
       <div className="container projects-page">
@@ -59,8 +77,8 @@ const Projects = () => {
               idx={13}
             />
           </h1>
-          <div className="row p-3">
-            <div className="col-3">
+          <div className="presentation p-3">
+            <div className="project-details">
               <div className="card">
                 <h5 className="card-title card-font-title">
                   {details[0].title}
@@ -101,13 +119,34 @@ const Projects = () => {
                   <details>{details[4].description} </details>
                 </h6>
               </div>
+              <div className="card">
+                <h5 className="card-title card-font-title">
+                  {details[5].title}
+                </h5>
+                <h6 className="card-font-description">
+                  <details>{details[5].description} </details>
+                </h6>
+              </div>
+              <div className="card">
+                <h5 className="card-title card-font-title">
+                  {details[5].title}
+                </h5>
+                <h6 className="card-font-description">
+                  <details>{details[5].description} </details>
+                </h6>
+              </div>
             </div>
           </div>
-          <div className='arrows'>
-            <FontAwesomeIcon icon={faArrowCircleLeft} className="back-arrow" />
+          <div className="arrows">
+            <FontAwesomeIcon
+              icon={faArrowCircleLeft}
+              className="back-arrow"
+              onMouseDown={scrollRight}
+            />
             <FontAwesomeIcon
               icon={faArrowCircleRight}
               className="forward-arrow"
+              onMouseDown={scrollLeft}
             />
           </div>
         </div>
