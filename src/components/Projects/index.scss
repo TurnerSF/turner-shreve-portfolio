@@ -68,7 +68,7 @@
 
         .card {
           flex-grow: 1;
-          width: 270px;
+          width: 350px;
           height: 600px;
           border: 2px solid #ffd700;
           padding: 20px;
@@ -78,16 +78,17 @@
           margin-right: 20px;
 
           .card-font-title {
-            font-size: 20px;
+            font-size: 30px;
             font-weight: 400;
-            margin-bottom: 10px;
             white-space: nowrap;
+            margin-top: 0px;
+            margin-bottom: 10px;
             text-align: center;
             border-bottom: 1px solid #ffd700;
           }
 
           .card-font-description {
-            font-size: 16px;
+            font-size: 22px;
             flex-grow: 1;
             text-align: center;
             letter-spacing: 1.3px;
@@ -96,8 +97,6 @@
 
           & .card-font-description:hover {
             cursor: pointer;
-            background-color: #ffd700;
-            color: #115173;
           }
         }
       }

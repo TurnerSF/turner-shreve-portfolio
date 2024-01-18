@@ -171,14 +171,12 @@ const Projects = () => {
             <FontAwesomeIcon
               icon={faArrowCircleLeft}
               className="back-arrow"
-              onClick={scrollRight}
               onMouseDown={handleMouseDownRight}
               onMouseUp={handleMouseUp}
             />
             <FontAwesomeIcon
               icon={faArrowCircleRight}
               className="forward-arrow"
-              onClick={scrollLeft}
               onMouseDown={handleMouseDownLeft}
               onMouseUp={handleMouseUp}
             />
